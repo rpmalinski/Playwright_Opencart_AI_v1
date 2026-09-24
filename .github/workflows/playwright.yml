@@ -87,8 +87,10 @@ jobs:
           )
 
           if [[ "$mode" == "headed" ]]; then
-            xvfb-run -a "${test_command[@]}" --headed
+            echo "Running Playwright in headed mode with Xvfb"
+            xvfb-run --auto-servernum -- "${test_command[@]}" --headed
           else
+            echo "Running Playwright in headless mode"
             "${test_command[@]}"
           fi
         env:
