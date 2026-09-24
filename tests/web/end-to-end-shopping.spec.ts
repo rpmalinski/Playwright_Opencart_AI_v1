@@ -1,7 +1,7 @@
 /**
  * Test Case: Complete Customer Shopping Journey
  *
- * Tags: @master @end-to-end
+ * Tags: @master @end-to-end @e2e
  *
  * Steps:
  * 1) Open the application
@@ -26,7 +26,7 @@ import { RandomDataUtil } from '../../utils/dataGenerator';
 
 test.describe('End-to-End Shopping Journey', () => {
 
-    test('Complete customer shopping journey @master @end-to-end', async ({
+    test('Complete customer shopping journey @master @end-to-end @e2e', async ({
         homePage, registerPage, successPage, loginPage, myAccountPage,
         searchResultsPage, productPage, cartPage, page
     }) => {
