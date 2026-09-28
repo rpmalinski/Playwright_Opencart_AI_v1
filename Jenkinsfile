@@ -17,6 +17,7 @@ pipeline {
   agent any
   tools {
     git 'Default'
+    nodejs 'nodejs'
   }
   options { timestamps() }
   parameters {
@@ -48,6 +49,7 @@ pipeline {
     }
     stage('📦 Install Dependencies') {
       steps {
+         sh 'node --version && npm --version'
          sh 'npm ci'
       }
     }
