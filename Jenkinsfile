@@ -55,7 +55,7 @@ pipeline {
     }
     stage('🤖 Install Playwright Browsers & Dependencies') {
       steps {
-        sh 'npx playwright install --with-deps'
+        sh 'npx playwright install'
         sh 'if [ ! -f .env ]; then cp .env.example .env; fi'
       }
     }
